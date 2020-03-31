@@ -18,6 +18,8 @@ LABEL maintainer="Nick Badger <nbadger@mintel.com>" \
       org.opencontainers.image.created="$BUILD_DATE" \
       org.opencontainers.image.revision="$VCS_REF"
 
+COPY --from=gcr.io/google_containers/pause-amd64:3.2 /pause /
+
 RUN apk add --no-cache mysql-client
 
 ENTRYPOINT ["mysql"]
