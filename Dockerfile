@@ -1,17 +1,14 @@
-FROM alpine:3.11
+FROM alpine:3.12
 
 ARG BUILD_DATE
 ARG VCS_REF
 
-RUN echo $BUILD_DATE
-RUN echo $VCS_REF
-
 LABEL maintainer="Nick Badger <nbadger@mintel.com>" \
-      org.opencontainers.image.title="mysql-client" \
+      org.opencontainers.image.title="k8s-mysqlclient" \
       org.opencontainers.image.description="Minimal image with mysql-client installed." \
-      org.opencontainers.url="https://github.com/mintel/docker-mysql-client" \
-      org.opencontainers.source="https://github.com/mintel/docker-mysql-client.git" \
-      org.opencontainers.image.version="0.1.0" \
+      org.opencontainers.url="https://github.com/mintel/k8s-mysqlclient" \
+      org.opencontainers.source="https://github.com/mintel/k8s-mysqlclient.git" \
+      org.opencontainers.image.version="0.3.0" \
       org.opencontainers.image.vendor="Mintel Group Ltd." \
       org.opencontainers.image.licences="MIT" \
       org.opencontainers.authors="Nick Badger <nbadger@mintel.com>" \
@@ -19,6 +16,7 @@ LABEL maintainer="Nick Badger <nbadger@mintel.com>" \
       org.opencontainers.image.revision="$VCS_REF"
 
 COPY --from=gcr.io/google_containers/pause-amd64:3.2 /pause /
+COPY --from=banzaicloud/vault-env:1.3.2 /usr/local/bin/vault-env /usr/local/bin/
 
 RUN apk add --no-cache mysql-client
 
