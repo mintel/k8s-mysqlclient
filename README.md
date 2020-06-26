@@ -1,3 +1,8 @@
-# docker-mysql-client
+# k8s-mysqlclient
 
-`mysql-client` docker-image based on Alpine
+Bundles `mysqlclient` with a few extra tools.
+
+## Additional Tools
+
+- https://github.com/banzaicloud/bank-vaults
+- `gcr.io/google_containers/pause-amd64`
