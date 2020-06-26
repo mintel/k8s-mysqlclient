@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.4.0 (2020-63-23)
+### Changed
+- Added and use `mintel` user
+- Added `docker-entrypoint.sh` to write out the `$HOME/.my.cnf` file on startup from vault
+
 ## 0.3.0 (2020-63-23)
 ### Changed
 - Renamed repo to `k8s-mysqlclient`
