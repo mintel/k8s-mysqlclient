@@ -2,12 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.4.0 (2020-63-23)
+## 0.5.0 (2020-11-03)
+### Changed
+- Add `VAULT_ENABLED` option to enable/disable use of `vault-env`
+- Add default for `DB_HOST`
+- Add option for `DB_CONF` file path
+- Make posix compliant
+
+## 0.4.0 (2020-06-23)
 ### Changed
 - Added and use `mintel` user
 - Added `docker-entrypoint.sh` to write out the `$HOME/.my.cnf` file on startup from vault
 
-## 0.3.0 (2020-63-23)
+## 0.3.0 (2020-06-23)
 ### Changed
 - Renamed repo to `k8s-mysqlclient`
 - Bump Alpine to `3.12.x`
