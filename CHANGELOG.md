@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.5.1 (2020-11-03)
+## 0.5.1 (2020-12-03)
 ### Fixed
 - Fix `cut` command and ensure we keep all chars from the environment variable
 
