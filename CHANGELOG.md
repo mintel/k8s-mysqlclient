@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.5.1 (2020-11-03)
+### Fixed
+- Fix `cut` command and ensure we keep all chars from the environment variable
+
 ## 0.5.0 (2020-11-03)
 ### Changed
 - Add `VAULT_ENABLED` option to enable/disable use of `vault-env`
