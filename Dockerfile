@@ -18,7 +18,7 @@ LABEL maintainer="Nick Badger <nbadger@mintel.com>" \
 COPY --from=gcr.io/google_containers/pause-amd64:3.2 /pause /
 COPY --from=banzaicloud/vault-env:1.3.2 /usr/local/bin/vault-env /usr/local/bin/
 
-RUN apk add --no-cache mysql-client
+RUN apk add --no-cache mysql-client mariadb-mytop
 RUN adduser -D -s /bin/sh -u 1000 mintel --home /home/mintel
 
 COPY docker-entrypoint.sh /
