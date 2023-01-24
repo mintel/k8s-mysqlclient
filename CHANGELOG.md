@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.6.0 (2023-01-24)
+### Changed
+- Add `mariadb-mytop` package
+
 ## 0.5.1 (2020-12-03)
 ### Fixed
 - Fix `cut` command and ensure we keep all chars from the environment variable
